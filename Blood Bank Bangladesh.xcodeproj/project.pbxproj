@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840212A71EAB372600356FD3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840212A61EAB372600356FD3 /* RegisterViewController.swift */; };
+		847CBFED1EAA76FE00F479D0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBFEC1EAA76FE00F479D0 /* Utilities.swift */; };
+		84EBA4A01EABE95D00440D7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBA49F1EABE95D00440D7C /* Constants.swift */; };
 		84EC7F521EA9031000415463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7F511EA9031000415463 /* AppDelegate.swift */; };
-		84EC7F541EA9031000415463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7F531EA9031000415463 /* ViewController.swift */; };
+		84EC7F541EA9031000415463 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7F531EA9031000415463 /* SignInViewController.swift */; };
 		84EC7F571EA9031000415463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EC7F551EA9031000415463 /* Main.storyboard */; };
 		84EC7F591EA9031000415463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EC7F581EA9031000415463 /* Assets.xcassets */; };
 		84EC7F5C1EA9031000415463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EC7F5A1EA9031000415463 /* LaunchScreen.storyboard */; };
+		84EC7F641EAA557800415463 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84EC7F631EAA557800415463 /* GoogleService-Info.plist */; };
+		F7ED93D5EE27D55108385ACA /* Pods_Blood_Bank_Bangladesh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29497669D97ACD59DD1F1772 /* Pods_Blood_Bank_Bangladesh.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2397023F06EBAD9E0AE77161 /* Pods-Blood Bank Bangladesh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Bank Bangladesh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blood Bank Bangladesh/Pods-Blood Bank Bangladesh.release.xcconfig"; sourceTree = "<group>"; };
+		29497669D97ACD59DD1F1772 /* Pods_Blood_Bank_Bangladesh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blood_Bank_Bangladesh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		561ABD858ACBF7D5EC583EE7 /* Pods-Blood Bank Bangladesh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blood Bank Bangladesh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blood Bank Bangladesh/Pods-Blood Bank Bangladesh.debug.xcconfig"; sourceTree = "<group>"; };
+		840212A61EAB372600356FD3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		847CBFEC1EAA76FE00F479D0 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		84EBA49F1EABE95D00440D7C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		84EC7F4E1EA9031000415463 /* Blood Bank Bangladesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Bank Bangladesh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EC7F511EA9031000415463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84EC7F531EA9031000415463 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84EC7F531EA9031000415463 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		84EC7F561EA9031000415463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84EC7F581EA9031000415463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84EC7F5B1EA9031000415463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84EC7F5D1EA9031000415463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EC7F631EAA557800415463 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7ED93D5EE27D55108385ACA /* Pods_Blood_Bank_Bangladesh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC4870D0DB51616E088B756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29497669D97ACD59DD1F1772 /* Pods_Blood_Bank_Bangladesh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84EC7F451EA9031000415463 = {
 			isa = PBXGroup;
 			children = (
 				84EC7F501EA9031000415463 /* Blood Bank Bangladesh */,
 				84EC7F4F1EA9031000415463 /* Products */,
+				974D6304DD07A33325268A9A /* Pods */,
+				0BC4870D0DB51616E088B756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +77,27 @@
 		84EC7F501EA9031000415463 /* Blood Bank Bangladesh */ = {
 			isa = PBXGroup;
 			children = (
+				84EBA49F1EABE95D00440D7C /* Constants.swift */,
 				84EC7F511EA9031000415463 /* AppDelegate.swift */,
-				84EC7F531EA9031000415463 /* ViewController.swift */,
+				84EC7F531EA9031000415463 /* SignInViewController.swift */,
 				84EC7F551EA9031000415463 /* Main.storyboard */,
 				84EC7F581EA9031000415463 /* Assets.xcassets */,
 				84EC7F5A1EA9031000415463 /* LaunchScreen.storyboard */,
 				84EC7F5D1EA9031000415463 /* Info.plist */,
+				84EC7F631EAA557800415463 /* GoogleService-Info.plist */,
+				847CBFEC1EAA76FE00F479D0 /* Utilities.swift */,
+				840212A61EAB372600356FD3 /* RegisterViewController.swift */,
 			);
 			path = "Blood Bank Bangladesh";
+			sourceTree = "<group>";
+		};
+		974D6304DD07A33325268A9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				561ABD858ACBF7D5EC583EE7 /* Pods-Blood Bank Bangladesh.debug.xcconfig */,
+				2397023F06EBAD9E0AE77161 /* Pods-Blood Bank Bangladesh.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EC7F601EA9031000415463 /* Build configuration list for PBXNativeTarget "Blood Bank Bangladesh" */;
 			buildPhases = (
+				949C1E0FE775F2A259D6E2EF /* [CP] Check Pods Manifest.lock */,
 				84EC7F4A1EA9031000415463 /* Sources */,
 				84EC7F4B1EA9031000415463 /* Frameworks */,
 				84EC7F4C1EA9031000415463 /* Resources */,
+				C3D682436CE9DAD83290EB3B /* [CP] Embed Pods Frameworks */,
+				83CDCB88A10844CF249C7C65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84EC7F5C1EA9031000415463 /* LaunchScreen.storyboard in Resources */,
+				84EC7F641EAA557800415463 /* GoogleService-Info.plist in Resources */,
 				84EC7F591EA9031000415463 /* Assets.xcassets in Resources */,
 				84EC7F571EA9031000415463 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +172,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		83CDCB88A10844CF249C7C65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blood Bank Bangladesh/Pods-Blood Bank Bangladesh-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		949C1E0FE775F2A259D6E2EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3D682436CE9DAD83290EB3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blood Bank Bangladesh/Pods-Blood Bank Bangladesh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84EC7F4A1EA9031000415463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84EC7F541EA9031000415463 /* ViewController.swift in Sources */,
+				84EBA4A01EABE95D00440D7C /* Constants.swift in Sources */,
+				847CBFED1EAA76FE00F479D0 /* Utilities.swift in Sources */,
+				84EC7F541EA9031000415463 /* SignInViewController.swift in Sources */,
 				84EC7F521EA9031000415463 /* AppDelegate.swift in Sources */,
+				840212A71EAB372600356FD3 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +348,7 @@
 		};
 		84EC7F611EA9031000415463 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561ABD858ACBF7D5EC583EE7 /* Pods-Blood Bank Bangladesh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BUH6E86LA;
@@ -270,6 +362,7 @@
 		};
 		84EC7F621EA9031000415463 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2397023F06EBAD9E0AE77161 /* Pods-Blood Bank Bangladesh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BUH6E86LA;
@@ -300,6 +393,7 @@
 				84EC7F621EA9031000415463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
