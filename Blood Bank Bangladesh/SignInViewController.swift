@@ -15,9 +15,7 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var messages: [FIRDataSnapshot]! = [FIRDataSnapshot]()
-    var ref: FIRDatabaseReference!
-    private var _refHandle: FIRDatabaseHandle!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +25,10 @@ class SignInViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(SignInViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
-        ConfigureDatabase()
+        
     }
     
-    func ConfigureDatabase(){
-        ref = FIRDatabase.database().reference()
-        _refHandle = self.ref.child("messages").observe(.childAdded,with: {
-            (snapshot) -> Void in
-            self.messages.append(snapshot)
-            //self.tableView.insertRows(at: [IndexPath(row: self.messages.count-1,section:0)], with: .automatic)
-        })
-    }
+    
     
     func dismissKeyboard(){
         view.endEditing(true)

@@ -54,6 +54,9 @@ class RegisterViewController: UIViewController {
     
     
     func createNewEmail(oldEmail: String) -> String{
+        //this does not handle the dots well when a dot is present before @
+        //need to improve on this
+        
         let fullArr = oldEmail.characters.split(separator: ".")
         
         let first = String(fullArr [0])
@@ -64,6 +67,85 @@ class RegisterViewController: UIViewController {
         
         return total
     }
+    
+    func CheckBloodGroup() -> Bool{
+        let bg = self.bloodGroup.text!
+        
+        switch bg {
+        case "o+","O+"  :
+            
+            return true
+        case "o-","O-"  :
+            
+            return true
+        case "A+","a+"  :
+            print( "A")
+            return true
+        case "A-","a-"  :
+            
+            return true
+        case "B+","b+"  :
+            
+            return true
+        case "B-","b-"  :
+            
+            return true
+            
+        case "AB+","ab+","aB+","Ab+"  :
+            
+            return true
+            
+        case "AB-","ab-","aB-","Ab-"  :
+            
+            return true
+            
+        default :
+            
+            return false
+        }
+        
+        
+    }
+    
+    func GetBloodGroup() -> String{
+        let bg = self.bloodGroup.text!
+        
+        switch bg {
+        case "o+","O+"  :
+            
+            return "O+"
+        case "o-","O-"  :
+            
+            return "O-"
+        case "A+","a+"  :
+           
+            return "A+"
+        case "A-","a-"  :
+            
+            return "A-"
+        case "B+","b+"  :
+            
+            return "B+"
+        case "B-","b-"  :
+            
+            return "B-"
+            
+        case "AB+","ab+","aB+","Ab+"  :
+            
+            return "AB+"
+            
+        case "AB-","ab-","aB-","Ab-"  :
+            
+            return "AB-"
+            
+        default :
+            
+            return "Invalid Input"
+        }
+        
+        
+    }
+    
     
     
     func CheckInput() -> Bool {
@@ -110,8 +192,10 @@ class RegisterViewController: UIViewController {
             
         }
         
-        if((bloodGroup.text?.characters.count)! < 2){
+        if(!self.CheckBloodGroup()){
             bloodGroup.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.2)
+            bloodGroup.text = ""
+            bloodGroup.placeholder = "Invalid Blood group"
             return false
         }else {
             bloodGroup.backgroundColor = UIColor.white
@@ -140,9 +224,13 @@ class RegisterViewController: UIViewController {
 //        }
 //    }
     
-    func saveInMessage(name: String) -> Void {
-    
-    }
+//    func saveInMessage() -> Void {
+//        let emailString = self.email.text!
+//        
+//        let newemail = self.createNewEmail(oldEmail: emailString)
+//        self.ref.child("Messages").child(newemail).setValue(nil)
+//    
+//    }
     
     func saveInUser() -> Void {
         let emailString = self.email.text!
@@ -159,8 +247,11 @@ class RegisterViewController: UIViewController {
         
     }
     
-    func saveInBloodGroup(name: String) -> Void {
-        
+    func saveInBloodGroup() -> Void {
+        let bg = GetBloodGroup()
+        var data = [Constants.BloodGroup.email: self.email.text! as String]
+        data[Constants.BloodGroup.mobile] = self.mobile.text!
+        self.ref.child("BloodGroups-User").child(bg).childByAutoId().setValue(data)
     }
     
     
@@ -202,6 +293,8 @@ class RegisterViewController: UIViewController {
                             else{
                                 print("Successfully created user. Here I can save other data")
                                 self.saveInUser()
+                                self.saveInBloodGroup()
+                                //self.saveInMessage()
                                 
                                 
                                 

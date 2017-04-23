@@ -10,13 +10,13 @@ import Foundation
 
 struct Constants {
     
-    struct initMessage{
-        static let user = "email"
-    }
-
-    struct Messages {
-        static let messageText = "messageText"
-    }
+//    struct initMessage{
+//        static let user = "email"
+//    }
+//
+//    struct Messages {
+//        static let messageText = "messageText"
+//    }
     
     struct UserDetails{
         static let name = "name"
@@ -26,7 +26,8 @@ struct Constants {
     }
     
     struct BloodGroup{
-        static let bloodGroup = "bloodGroup"
+        static let email = "Email"
+        static let mobile = "Mobile"
     }
     
 }
