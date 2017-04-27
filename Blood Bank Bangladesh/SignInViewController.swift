@@ -60,6 +60,10 @@ class SignInViewController: UIViewController {
                 return
             }
             print("signed in!")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! UITabBarController
+            self.present(vc, animated: true, completion: nil)
+            
+             
             
             
             
