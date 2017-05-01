@@ -30,4 +30,9 @@ struct Constants {
         static let mobile = "Mobile"
     }
     
+    struct RequestMessage{
+        static let message =  "Message"
+        static let sender = "Sender"
+    }
+    
 }

@@ -1,17 +1,18 @@
 //
-//  MainViewController.swift
+//  InboxViewController.swift
 //  Blood Bank Bangladesh
 //
-//  Created by Ahnaf on 4/25/17.
+//  Created by Ahnaf on 4/30/17.
 //  Copyright © 2017 Ahnaf. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UITabBarController {
+class InboxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Inbox")
 
         // Do any additional setup after loading the view.
     }
