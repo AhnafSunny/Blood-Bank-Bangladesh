@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class InboxViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Inbox")
+        
+        
 
         // Do any additional setup after loading the view.
     }

@@ -40,5 +40,86 @@ class Utilities {
         
         return total
     }
+    
+    
+    func CheckBloodGroup(bg: String) -> Bool{
+        
+        
+        switch bg {
+        case "o+","O+"  :
+            
+            return true
+        case "o-","O-"  :
+            
+            return true
+        case "A+","a+"  :
+            print( "A")
+            return true
+        case "A-","a-"  :
+            
+            return true
+        case "B+","b+"  :
+            
+            return true
+        case "B-","b-"  :
+            
+            return true
+            
+        case "AB+","ab+","aB+","Ab+"  :
+            
+            return true
+            
+        case "AB-","ab-","aB-","Ab-"  :
+            
+            return true
+            
+        default :
+            
+            return false
+        }
+        
+        
+    }
+    
+    func GetBloodGroup(bg: String) -> String{
+        
+        switch bg {
+        case "o+","O+"  :
+            
+            return "O+"
+        case "o-","O-"  :
+            
+            return "O-"
+        case "A+","a+"  :
+            
+            return "A+"
+        case "A-","a-"  :
+            
+            return "A-"
+        case "B+","b+"  :
+            
+            return "B+"
+        case "B-","b-"  :
+            
+            return "B-"
+            
+        case "AB+","ab+","aB+","Ab+"  :
+            
+            return "AB+"
+            
+        case "AB-","ab-","aB-","Ab-"  :
+            
+            return "AB-"
+            
+        default :
+            
+            return "Invalid Input"
+        }
+        
+        
+    }
+    
+    
+    
 
 }

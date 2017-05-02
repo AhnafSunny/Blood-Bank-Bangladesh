@@ -21,6 +21,7 @@ class RequestBloodViewController: UIViewController, UIPickerViewDataSource,UIPic
     
     var ref: FIRDatabaseReference?
     var databaseHandle: FIRDatabaseHandle?
+    var databaseHandle2: FIRDatabaseHandle?
     
     
     //var contactList : [String:String] = [:]
@@ -43,16 +44,33 @@ class RequestBloodViewController: UIViewController, UIPickerViewDataSource,UIPic
 
     @IBAction func SubmitRequest(_ sender: Any) {
         print("request blood fired")
+        //get current user email
+        let currEmail = FIRAuth.auth()?.currentUser?.email!
+        //print(currEmail)
+        let newemail = Utilities().createNewEmail(oldEmail: currEmail!)
+        
+        //get current user Number
+        var number = "NULL"
+        
+        self.databaseHandle2 = self.ref?.child("UserDetails").child(newemail).observe(.value, with: { (datasnap) in
+            let mobilenumber = datasnap.value as? [String:String] ?? [:]
+            number = mobilenumber["mobile"]!
+            print(number)
+            
+        })
+        
+        ref?.removeObserver(withHandle: databaseHandle2!)
+        
         let bg:String = titleLabel.text! as String
         
-        //get the email contacts
+        //get the email contacts of people with the desired blood group
         databaseHandle = ref?.child("BloodGroups-User").child(bg).observe(.childAdded, with: { (snapshot) in
-            //when a child is added
+            //send messages to the users with the desired blood group
             let user = snapshot.value as! Dictionary< String,String>
-            if let email = user[Constants.BloodGroup.email] as String!{
-                
-                    let emailid = Utilities().createNewEmail(oldEmail: email)
-                    let data = [Constants.RequestMessage.message : "Need Blood"]
+            if let receiverEmail = user[Constants.BloodGroup.email] as String!{
+                    let emailid = Utilities().createNewEmail(oldEmail: receiverEmail)
+                    var data = [Constants.RequestMessage.message : "Need Blood"]
+                    data[Constants.RequestMessage.sender] = number
                     self.ref?.child("Messages").child(emailid).childByAutoId().setValue(data)
                 
                 
@@ -61,6 +79,7 @@ class RequestBloodViewController: UIViewController, UIPickerViewDataSource,UIPic
         
         })
         
+        ref?.removeObserver(withHandle: databaseHandle!)
         
     }
     

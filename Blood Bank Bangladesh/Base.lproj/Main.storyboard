@@ -47,7 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-SK-EDW">
                                 <rect key="frame" x="131.5" y="405" width="57" height="30"/>
                                 <state key="normal" title="Register">
-                                    <color key="titleColor" red="0.77099857233502544" green="0.42978366341199764" blue="0.065448255779599881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.8733740482233503" green="0.68418888281355272" blue="0.11690440435996755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Evm-cA-mLs" kind="presentation" id="GSI-N8-Gfn"/>
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="100" y="46" width="120" height="120"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99278219163472914" green="1" blue="0.75563545627585604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.31813738614026732" green="0.64010945431472077" blue="0.53094409399737486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iUl-kT-tpQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0u7-5W-IGX"/>
                             <constraint firstItem="iUl-kT-tpQ" firstAttribute="top" secondItem="fQN-F1-5Zx" secondAttribute="bottom" constant="10" id="3qa-xR-pyI"/>
@@ -361,7 +361,7 @@
                                 <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.38858206274260976" green="0.39242940989847719" blue="0.39242940989847719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>

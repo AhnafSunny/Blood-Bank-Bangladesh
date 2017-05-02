@@ -34,11 +34,6 @@ class RegisterViewController: UIViewController {
     
     func ConfigureDatabase(){
         ref = FIRDatabase.database().reference()
-//        _refHandle = self.ref.child("messages").observe(.childAdded,with: {
-//            (snapshot) -> Void in
-//            self.messages.append(snapshot)
-//            //self.tableView.insertRows(at: [IndexPath(row: self.messages.count-1,section:0)], with: .automatic)
-//        })
     }
     
     func dismissKeyboard(){
@@ -51,103 +46,7 @@ class RegisterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    func createNewEmail(oldEmail: String) -> String{
-        //this does not handle the dots well when a dot is present before @
-        //need to improve on this
-        
-        let fullArr = oldEmail.characters.split(separator: ".")
-        
-        let first = String(fullArr [0])
-        let second = String(fullArr[1])
-        
-        let total = first + "0" + second
-        
-        
-        return total
-    }
-    
-    func CheckBloodGroup() -> Bool{
-        let bg = self.bloodGroup.text!
-        
-        switch bg {
-        case "o+","O+"  :
-            
-            return true
-        case "o-","O-"  :
-            
-            return true
-        case "A+","a+"  :
-            print( "A")
-            return true
-        case "A-","a-"  :
-            
-            return true
-        case "B+","b+"  :
-            
-            return true
-        case "B-","b-"  :
-            
-            return true
-            
-        case "AB+","ab+","aB+","Ab+"  :
-            
-            return true
-            
-        case "AB-","ab-","aB-","Ab-"  :
-            
-            return true
-            
-        default :
-            
-            return false
-        }
-        
-        
-    }
-    
-    func GetBloodGroup() -> String{
-        let bg = self.bloodGroup.text!
-        
-        switch bg {
-        case "o+","O+"  :
-            
-            return "O+"
-        case "o-","O-"  :
-            
-            return "O-"
-        case "A+","a+"  :
-           
-            return "A+"
-        case "A-","a-"  :
-            
-            return "A-"
-        case "B+","b+"  :
-            
-            return "B+"
-        case "B-","b-"  :
-            
-            return "B-"
-            
-        case "AB+","ab+","aB+","Ab+"  :
-            
-            return "AB+"
-            
-        case "AB-","ab-","aB-","Ab-"  :
-            
-            return "AB-"
-            
-        default :
-            
-            return "Invalid Input"
-        }
-        
-        
-    }
-    
-    
-    
+
     func CheckInput() -> Bool {
         
         
@@ -192,7 +91,7 @@ class RegisterViewController: UIViewController {
             
         }
         
-        if(!self.CheckBloodGroup()){
+        if(!Utilities().CheckBloodGroup(bg: bloodGroup.text! as String)){
             bloodGroup.backgroundColor = UIColor.init(red: 0.8, green: 0, blue: 0, alpha: 0.2)
             bloodGroup.text = ""
             bloodGroup.placeholder = "Invalid Blood group"
@@ -208,34 +107,11 @@ class RegisterViewController: UIViewController {
         
     }
     
-//    func SendMessage(data: [String: String]){
-//        
-//        
-//        //let uid = FIRAuth.auth().u
-//        
-//        if let toText: String = toTextBox.text {
-//            let to = createNewEmail(oldEmail: toText)
-//            if let user = FIRAuth.auth()?.currentUser?.email{
-//                var packet = data
-//                packet[Constants.MessageFields.dateTime] = Utilities().GetDate()
-//                packet[Constants.MessageFields.sender] = user
-//                self.ref.child(to).childByAutoId().setValue(packet)
-//            }
-//        }
-//    }
-    
-//    func saveInMessage() -> Void {
-//        let emailString = self.email.text!
-//        
-//        let newemail = self.createNewEmail(oldEmail: emailString)
-//        self.ref.child("Messages").child(newemail).setValue(nil)
-//    
-//    }
     
     func saveInUser() -> Void {
         let emailString = self.email.text!
         
-        let newemail = self.createNewEmail(oldEmail: emailString)
+        let newemail = Utilities().createNewEmail(oldEmail: emailString)
         
         var data = [Constants.UserDetails.name: self.name.text! as String]
         data[Constants.UserDetails.mobile] = self.mobile.text!
@@ -248,7 +124,7 @@ class RegisterViewController: UIViewController {
     }
     
     func saveInBloodGroup() -> Void {
-        let bg = GetBloodGroup()
+        let bg = Utilities().GetBloodGroup(bg: bloodGroup.text!)
         var data = [Constants.BloodGroup.email: self.email.text! as String]
         data[Constants.BloodGroup.mobile] = self.mobile.text!
         self.ref.child("BloodGroups-User").child(bg).childByAutoId().setValue(data)
@@ -321,14 +197,5 @@ class RegisterViewController: UIViewController {
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
