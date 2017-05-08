@@ -11,6 +11,7 @@
 		84405B5F1EB6365100210C81 /* RequestBloodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84405B5E1EB6365100210C81 /* RequestBloodViewController.swift */; };
 		846717F21EBA261900C4B4E4 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846717F11EBA261800C4B4E4 /* InboxViewController.swift */; };
 		847CBFED1EAA76FE00F479D0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBFEC1EAA76FE00F479D0 /* Utilities.swift */; };
+		84CD2AB91EBC9AED00F8A63B /* MDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD2AB81EBC9AED00F8A63B /* MDVC.swift */; };
 		84EBA4A01EABE95D00440D7C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBA49F1EABE95D00440D7C /* Constants.swift */; };
 		84EC7F521EA9031000415463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7F511EA9031000415463 /* AppDelegate.swift */; };
 		84EC7F541EA9031000415463 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC7F531EA9031000415463 /* SignInViewController.swift */; };
@@ -29,6 +30,7 @@
 		84405B5E1EB6365100210C81 /* RequestBloodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBloodViewController.swift; sourceTree = "<group>"; };
 		846717F11EBA261800C4B4E4 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		847CBFEC1EAA76FE00F479D0 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		84CD2AB81EBC9AED00F8A63B /* MDVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDVC.swift; sourceTree = "<group>"; };
 		84EBA49F1EABE95D00440D7C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		84EC7F4E1EA9031000415463 /* Blood Bank Bangladesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Bank Bangladesh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EC7F511EA9031000415463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				840212A61EAB372600356FD3 /* RegisterViewController.swift */,
 				84405B5E1EB6365100210C81 /* RequestBloodViewController.swift */,
 				846717F11EBA261800C4B4E4 /* InboxViewController.swift */,
+				84CD2AB81EBC9AED00F8A63B /* MDVC.swift */,
 			);
 			path = "Blood Bank Bangladesh";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				84EC7F521EA9031000415463 /* AppDelegate.swift in Sources */,
 				84405B5F1EB6365100210C81 /* RequestBloodViewController.swift in Sources */,
 				840212A71EAB372600356FD3 /* RegisterViewController.swift in Sources */,
+				84CD2AB91EBC9AED00F8A63B /* MDVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

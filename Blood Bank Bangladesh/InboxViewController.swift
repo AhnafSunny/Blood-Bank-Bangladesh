@@ -16,6 +16,9 @@ class InboxViewController: UITableViewController {
     
     var ref: FIRDatabaseReference?
     var databaseHandle: FIRDatabaseHandle?
+    
+    var phoneNumber = String()
+    var messageDetail = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,9 +94,45 @@ class InboxViewController: UITableViewController {
         return cell
     }
     
+    
+    
+    
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
-        performSegue(withIdentifier: "mdSegue", sender: self)
+        
+        let currentcell = tableView.cellForRow(at: indexPath)
+        
+        phoneNumber = (currentcell?.textLabel?.text)!
+        messageDetail = (currentcell?.detailTextLabel?.text)!
+        
+        let newVC: MDVC = MDVC()
+        newVC.passnumber = phoneNumber
+        newVC.passmessage = messageDetail
+        
+//        self.present(newVC, animated: true, completion: nil)
+//        //self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "MDsegue", sender: self)
+        
+        //print("cell clicked")
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier{
+            if(id == "MDsegue"){
+                let newVC = segue.destination as! MDVC
+                newVC.passnumber = phoneNumber
+                newVC.passmessage = messageDetail
+                
+                
+                //newVC.messagelbl.text = messageDetail
+                //newVC.numberlbl.text = phoneNumber
+                
+                print("prepare for segue")
+            }
+        }
     }
     
 }
