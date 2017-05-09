@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
 import FirebaseAuth
 
 class InboxViewController: UITableViewController {
@@ -134,5 +135,24 @@ class InboxViewController: UITableViewController {
             }
         }
     }
+    
+    
+    @IBAction func SignOut(_ sender: Any) {
+        print("sign out")
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        }
+        catch _ as NSError{
+            print("error:")
+        }
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "signin")
+        self.show(vc!, sender: self)
+        
+        
+    }
+    
+    
     
 }

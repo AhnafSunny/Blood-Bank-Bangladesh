@@ -15,7 +15,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="Blood_Bank_Bangladesh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signin" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Blood_Bank_Bangladesh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -397,15 +397,36 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDi-8r-zqQ">
-                                    <rect key="frame" x="139" y="33" width="42" height="21"/>
+                                    <rect key="frame" x="120" y="29.5" width="80" height="28"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.90588235289999997" green="0.23921568630000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oU8-aq-C3D">
+                                    <rect key="frame" x="244.5" y="30" width="61" height="28"/>
+                                    <color key="backgroundColor" red="0.90588235289999997" green="0.23921568630000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="sign out">
+                                        <color key="titleColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="SignOut:" destination="otQ-FA-6NX" eventType="touchUpInside" id="ky5-mI-YYv"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="KDi-8r-zqQ" firstAttribute="height" secondItem="BQX-lP-CPu" secondAttribute="height" multiplier="0.4" id="0GD-SW-IUD"/>
                                 <constraint firstItem="KDi-8r-zqQ" firstAttribute="centerY" secondItem="BQX-lP-CPu" secondAttribute="centerY" constant="8" id="AeP-PS-PQ7"/>
+                                <constraint firstAttribute="trailing" secondItem="oU8-aq-C3D" secondAttribute="trailing" constant="15" id="CDG-qC-Jhb"/>
+                                <constraint firstItem="oU8-aq-C3D" firstAttribute="centerY" secondItem="BQX-lP-CPu" secondAttribute="centerY" constant="8" id="DDV-k9-FFM"/>
+                                <constraint firstItem="oU8-aq-C3D" firstAttribute="height" secondItem="BQX-lP-CPu" secondAttribute="height" multiplier="0.4" id="Mt0-qB-zb4"/>
+                                <constraint firstItem="oU8-aq-C3D" firstAttribute="width" secondItem="BQX-lP-CPu" secondAttribute="width" multiplier="0.19" id="Pjn-Nc-Kur"/>
+                                <constraint firstItem="KDi-8r-zqQ" firstAttribute="width" secondItem="BQX-lP-CPu" secondAttribute="width" multiplier="0.25" id="bqf-Nv-h9c"/>
                                 <constraint firstItem="KDi-8r-zqQ" firstAttribute="centerX" secondItem="BQX-lP-CPu" secondAttribute="centerX" id="vrC-wx-3eY"/>
                             </constraints>
                         </view>
