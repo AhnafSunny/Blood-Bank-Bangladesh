@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class MDVC: UIViewController {
     @IBOutlet weak var messagelbl: UILabel!
@@ -26,6 +27,13 @@ class MDVC: UIViewController {
         
         messagelbl.text = passmessage
         numberlbl.text = passnumber
+        
+        messagelbl.layer.cornerRadius = 15
+        messagelbl.layer.masksToBounds = true
+        
+        numberlbl.layer.cornerRadius = 15
+        numberlbl.layer.masksToBounds = true
+        
         
         
         
