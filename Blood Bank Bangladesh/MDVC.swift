@@ -18,13 +18,6 @@ class MDVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //messagelbl.text = passmessage
-        //numberlbl.text = passnumber
-        
-        print("new VC")
-        print(passnumber)
-        print(passmessage)
-        
         messagelbl.text = passmessage
         numberlbl.text = passnumber
         
@@ -48,9 +41,9 @@ class MDVC: UIViewController {
     
     @IBAction func call_button_pressed(_ sender: Any) {
         
-        print("call pressed")
+        
         if let number = numberlbl.text{
-            if let phoneURL = NSURL(string: "tel//\(number)"){
+            if let phoneURL = NSURL(string: "tel://\(number)"){
                     UIApplication.shared.open(phoneURL as URL, completionHandler: nil)
             }
         }
@@ -58,14 +51,5 @@ class MDVC: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

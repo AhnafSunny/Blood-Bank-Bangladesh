@@ -39,7 +39,7 @@ class InboxViewController: UITableViewController {
         let currEmail = FIRAuth.auth()?.currentUser?.email!
         //print(currEmail)
         let newemail = Utilities().createNewEmail(oldEmail: currEmail!)
-        print("inside fetch data")
+        
         
         
         ref = FIRDatabase.database().reference()
@@ -115,7 +115,7 @@ class InboxViewController: UITableViewController {
 //        //self.dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "MDsegue", sender: self)
         
-        //print("cell clicked")
+        
         
     }
     
@@ -130,7 +130,7 @@ class InboxViewController: UITableViewController {
                 //newVC.messagelbl.text = messageDetail
                 //newVC.numberlbl.text = phoneNumber
                 
-                print("prepare for segue")
+                
             }
         }
     }

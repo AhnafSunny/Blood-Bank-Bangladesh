@@ -35,4 +35,8 @@ struct Constants {
         static let sender = "Sender"
     }
     
+    struct RequestMessageDetail {
+        static let messageDetail = "Hi " 
+    }
+    
 }
